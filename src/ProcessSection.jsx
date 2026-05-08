@@ -33,7 +33,7 @@ const ProcessSection = () => {
   ]
 
   return (
-    <section ref={ref} className="bg-black py-28 md:py-40 px-6">
+    <section ref={ref} className="bg-black py-16 md:py-24 lg:py-40 px-4 md:px-6">
       <div className="max-w-3xl mx-auto">
         {/* Label */}
         <div className="text-white/40 text-xs tracking-widest uppercase mb-8">
@@ -42,7 +42,7 @@ const ProcessSection = () => {
         
         {/* Heading */}
         <h2 
-          className="text-4xl md:text-5xl text-white mb-16"
+          className="text-3xl md:text-4xl lg:text-5xl text-white mb-12 md:mb-16"
           style={{ fontFamily: 'Instrument Serif, serif' }}
         >
           From consultation to <em className="italic text-white/40">automation.</em>
@@ -51,13 +51,13 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />
+          <div className="absolute left-3 top-0 bottom-0 w-px bg-white/10" />
           
           {/* Steps */}
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Dot */}
-              <div className="w-2 h-2 rounded-full bg-white/30 absolute left-[13px] top-2" />
+              <div className="w-1.5 h-1.5 rounded-full bg-white/30 absolute left-[10px] top-2" />
               
               {/* Content */}
               <motion.div
@@ -65,7 +65,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="pl-12"
+                className="pl-8 md:pl-12"
               >
                 {/* Step number */}
                 <div className="text-white/20 text-xs tracking-widest mb-1">
@@ -74,14 +74,14 @@ const ProcessSection = () => {
                 
                 {/* Step title */}
                 <h3 
-                  className="text-white text-xl mb-2"
+                  className="text-white text-lg md:text-xl mb-2"
                   style={{ fontFamily: 'Instrument Serif, serif' }}
                 >
                   {step.title}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white/50 text-xs md:text-sm leading-relaxed">
                   {step.description}
                 </p>
               </motion.div>

@@ -73,69 +73,64 @@ const Hero = () => {
         loop
         disablePictureInPicture
         x-webkit-airplay="allow"
-        webkit-playsinline
+        webkit-playsinline="true"
       />
 
       {/* Navbar */}
-      <nav className="relative z-20 px-6 py-6">
-        <div className="liquid-glass rounded-full max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
+      <nav className="relative z-20 px-4 py-4">
+        <div className="liquid-glass rounded-full max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Cpu size={24} className="text-white" />
-            <span className="text-white font-semibold text-lg">PLR Robotics</span>
-            <div className="hidden md:flex items-center gap-8 ml-8">
-              <a href="#services" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Solutions</a>
-              <a href="#robots" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Systems</a>
-              <a href="#about" className="text-white/80 hover:text-white text-sm font-medium transition-colors">About</a>
-            </div>
+            <Cpu size={20} className="text-white" />
+            <span className="text-white font-semibold text-base">PLR Robotics</span>
           </div>
-          <div className="flex items-center gap-4">
-            <button className="text-white text-sm font-medium hover:text-white/80 transition-colors">Contact</button>
-            <button className="liquid-glass rounded-full px-6 py-2 text-white text-sm font-medium hover:bg-white/5 transition-colors">Demo</button>
+          <div className="flex items-center gap-3">
+            <button className="text-white text-xs font-medium hover:text-white/80 transition-colors hidden sm:block">Contact</button>
+            <button className="liquid-glass rounded-full px-4 py-2 text-white text-xs font-medium hover:bg-white/5 transition-colors">Demo</button>
           </div>
         </div>
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-12 text-center -translate-y-[20%]">
-        <h1 className="text-7xl md:text-8xl lg:text-9xl text-white tracking-tight whitespace-nowrap font-serif" style={{ fontFamily: 'Instrument Serif, serif' }}>
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-8 text-center -translate-y-[15%]">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white tracking-tight font-serif leading-tight" style={{ fontFamily: 'Instrument Serif, serif' }}>
           Engineering <em className="italic">Intelligent</em>
-          <br className="hidden md:block" />
+          <br className="block" />
           Automation.
         </h1>
         
-        <div className="max-w-xl w-full mt-12">
-          <div className="liquid-glass rounded-full pl-6 pr-2 py-2 flex items-center gap-3">
+        <div className="w-full max-w-sm mt-8">
+          <div className="liquid-glass rounded-full pl-4 pr-2 py-2 flex items-center gap-2">
             <input
               type="email"
               placeholder="Request consultation"
-              className="bg-transparent text-white placeholder:text-white/40 outline-none flex-1"
+              className="bg-transparent text-white placeholder:text-white/40 outline-none flex-1 text-sm"
             />
-            <button className="bg-white rounded-full p-3 text-black hover:bg-white/90 transition-colors">
-              <ArrowRight size={20} />
+            <button className="bg-white rounded-full p-2 text-black hover:bg-white/90 transition-colors">
+              <ArrowRight size={16} />
             </button>
           </div>
         </div>
 
-        <p className="text-white text-sm leading-relaxed px-4 mt-8 max-w-2xl">
+        <p className="text-white text-sm leading-relaxed px-2 mt-6 max-w-lg">
           Precision robotics and AI-powered automation systems for the future of smart manufacturing. Transform your industrial operations with cutting-edge robotic solutions.
         </p>
 
-        <button className="liquid-glass rounded-full px-8 py-3 text-white text-sm font-medium hover:bg-white/5 transition-colors mt-8 flex items-center gap-2">
-          <Zap size={16} />
+        <button className="liquid-glass rounded-full px-6 py-3 text-white text-sm font-medium hover:bg-white/5 transition-colors mt-6 flex items-center gap-2">
+          <Zap size={14} />
           Explore Solutions
         </button>
       </div>
 
       {/* Social Icons Footer */}
-      <div className="relative z-10 flex justify-center gap-4 pb-12">
-        <a href="#" className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all">
-          <Camera size={20} />
+      <div className="relative z-10 flex justify-center gap-3 pb-8">
+        <a href="#" className="liquid-glass rounded-full p-3 text-white/80 hover:text-white hover:bg-white/5 transition-all">
+          <Camera size={16} />
         </a>
-        <a href="#" className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all">
-          <MessageCircle size={20} />
+        <a href="#" className="liquid-glass rounded-full p-3 text-white/80 hover:text-white hover:bg-white/5 transition-all">
+          <MessageCircle size={16} />
         </a>
-        <a href="#" className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all">
-          <Cpu size={20} />
+        <a href="#" className="liquid-glass rounded-full p-3 text-white/80 hover:text-white hover:bg-white/5 transition-all">
+          <Cpu size={16} />
         </a>
       </div>
     </section>

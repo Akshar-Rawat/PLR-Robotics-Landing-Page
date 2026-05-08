@@ -6,7 +6,7 @@ const FeaturedVideoSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="bg-black pt-6 md:pt-10 pb-20 md:pb-32 px-6 overflow-hidden">
+    <section ref={ref} className="bg-black pt-4 md:pt-6 lg:pt-10 pb-16 md:pb-24 lg:pb-32 px-4 md:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -29,12 +29,12 @@ const FeaturedVideoSection = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           
           {/* Bottom overlay content */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-end">
+          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-10">
+            <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 items-start">
               {/* Left card */}
-              <div className="liquid-glass rounded-2xl p-6 md:p-8 max-w-md">
+              <div className="liquid-glass rounded-2xl p-4 md:p-6 lg:p-8 max-w-md w-full">
                 <div className="text-white/50 text-xs tracking-widest uppercase mb-3">Our Approach</div>
-                <p className="text-white text-sm md:text-base leading-relaxed">
+                <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed">
                   We believe in the power of curiosity-driven exploration. Every project starts with a question, and every answer opens a new door to innovation.
                 </p>
               </div>
@@ -43,7 +43,7 @@ const FeaturedVideoSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="liquid-glass rounded-full px-8 py-3 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+                className="liquid-glass rounded-full px-6 py-3 text-white text-xs md:text-sm font-medium hover:bg-white/5 transition-colors w-full sm:w-auto"
               >
                 Explore more
               </motion.button>

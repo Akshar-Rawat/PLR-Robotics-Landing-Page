@@ -24,7 +24,7 @@ const RobotsSection = () => {
   ];
 
   return (
-    <section ref={ref} className="bg-black py-28 md:py-40 px-6">
+    <section ref={ref} className="bg-black py-16 md:py-24 lg:py-40 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Label */}
         <div className="text-center mb-4">
@@ -33,14 +33,14 @@ const RobotsSection = () => {
         
         {/* Heading */}
         <h2 
-          className="text-center text-5xl md:text-7xl text-white mb-16"
+          className="text-center text-3xl md:text-4xl lg:text-6xl xl:text-7xl text-white mb-12 md:mb-16"
           style={{ fontFamily: 'Instrument Serif, serif' }}
         >
           Advanced. Intelligent. <em className="italic text-white/40">Reliable.</em>
         </h2>
 
         {/* Robots Grid */}
-        <div className="grid-cols-1 md:grid-cols-3 gap-6 grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {robots.map((robot, index) => (
             <motion.div
               key={robot.name}
@@ -61,19 +61,19 @@ const RobotsSection = () => {
               </div>
               
               {/* Body */}
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 {/* Tag */}
                 <div className="text-white/40 text-xs tracking-widest uppercase mb-3">
                   {robot.tag}
                 </div>
                 
                 {/* Robot Name */}
-                <h3 className="text-white text-xl mb-2">
+                <h3 className="text-white text-lg md:text-xl mb-2">
                   {robot.name}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white/50 text-xs md:text-sm leading-relaxed">
                   {robot.description}
                 </p>
               </div>

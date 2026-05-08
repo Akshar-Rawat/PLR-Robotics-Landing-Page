@@ -39,7 +39,7 @@ const IndustriesSection = () => {
   ]
 
   return (
-    <section ref={ref} className="bg-black py-28 md:py-40 px-6">
+    <section ref={ref} className="bg-black py-16 md:py-24 lg:py-40 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Label */}
         <div className="text-white/40 text-xs tracking-widest uppercase mb-8">
@@ -48,14 +48,14 @@ const IndustriesSection = () => {
         
         {/* Heading */}
         <h2 
-          className="text-4xl md:text-6xl text-white mb-16"
+          className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-12 md:mb-16"
           style={{ fontFamily: 'Instrument Serif, serif' }}
         >
           Built for the world's most <em className="italic text-white/40">demanding</em> industries.
         </h2>
 
         {/* Industries Grid */}
-        <div className="grid-cols-2 md:grid-cols-3 gap-4 grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.name}
@@ -63,7 +63,7 @@ const IndustriesSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               whileHover={{ scale: 1.02 }}
-              className="liquid-glass robotics-glow rounded-2xl p-6 md:p-8"
+              className="liquid-glass robotics-glow rounded-2xl p-4 md:p-6 lg:p-8"
             >
               {/* Icon Area */}
               <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-4">
@@ -73,12 +73,12 @@ const IndustriesSection = () => {
               </div>
               
               {/* Industry Name */}
-              <h3 className="text-white text-lg mb-2">
+              <h3 className="text-white text-base md:text-lg mb-2">
                 {industry.name}
               </h3>
               
               {/* Description */}
-              <p className="text-white/40 text-sm">
+              <p className="text-white/40 text-xs md:text-sm">
                 {industry.description}
               </p>
             </motion.div>

@@ -22,7 +22,7 @@ const ServicesSection = () => {
   ]
 
   return (
-    <section ref={ref} className="bg-black py-28 md:py-40 px-6 overflow-hidden relative">
+    <section ref={ref} className="bg-black py-16 md:py-24 lg:py-40 px-4 md:px-6 overflow-hidden relative">
       {/* Subtle radial gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.02)_0%,_transparent_60%)] pointer-events-none" />
       
@@ -32,14 +32,14 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="flex justify-between items-center mb-12 md:mb-16"
+          className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 md:mb-12 lg:mb-16 gap-2"
         >
-          <h2 className="text-3xl md:text-5xl text-white tracking-tight">Robotics Solutions</h2>
-          <div className="text-white/40 text-sm hidden md:block">Automation systems</div>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl text-white tracking-tight">Robotics Solutions</h2>
+          <div className="text-white/40 text-xs sm:text-sm">Automation systems</div>
         </motion.div>
 
         {/* Two-card grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -64,15 +64,15 @@ const ServicesSection = () => {
               </div>
 
               {/* Card body */}
-              <div className="p-6 md:p-8">
+              <div className="p-4 md:p-6 lg:p-8">
                 <div className="flex justify-between items-start mb-3">
                   <div className="text-white/40 text-xs tracking-widest uppercase">{service.tag}</div>
                   <div className="liquid-glass rounded-full p-2">
                     <ArrowUpRight size={16} className="text-white" />
                   </div>
                 </div>
-                <h3 className="text-white text-xl md:text-2xl mb-3 tracking-tight">{service.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-white text-lg md:text-xl lg:text-2xl mb-3 tracking-tight">{service.title}</h3>
+                <p className="text-white/50 text-xs md:text-sm leading-relaxed">{service.description}</p>
               </div>
             </motion.div>
           ))}

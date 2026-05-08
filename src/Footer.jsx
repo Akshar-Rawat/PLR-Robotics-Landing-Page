@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-black pt-20 pb-12 px-6 border-t border-white/10">
+    <footer className="bg-black pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 px-4 md:px-6 border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         {/* Top Row */}
-        <div className="flex justify-between items-start flex-wrap gap-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-12">
           {/* Left: Logo and Tagline */}
           <div>
             <div 
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
           
           {/* Right: Navigation Columns */}
-          <div className="flex gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full lg:w-auto">
             {/* Column 1: Solutions */}
             <div>
               <div className="text-white/40 text-xs tracking-widest uppercase mb-4">
@@ -94,7 +94,7 @@ const Footer = () => {
         </div>
         
         {/* Bottom Row */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center text-white/20 text-xs">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/20 text-xs gap-4">
           <div>
             © 2026 PLR Robotics. All rights reserved.
           </div>

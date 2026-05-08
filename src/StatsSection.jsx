@@ -68,30 +68,30 @@ const StatsSection = () => {
   ]
 
   return (
-    <section ref={ref} className="bg-black py-20 px-6">
+    <section ref={ref} className="bg-black py-16 md:py-20 px-4 md:px-6">
       {/* Top Border */}
-      <div className="h-px bg-white/10 mb-20" />
+      <div className="h-px bg-white/10 mb-12 md:mb-20" />
       
       {/* Stats Grid */}
-      <div className="grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto grid">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`text-center ${index < stats.length - 1 ? 'md:border-r md:border-white/10' : ''}`}
+            className={`text-center ${index < stats.length - 1 ? 'border-r border-white/10' : ''} ${index < stats.length - 2 ? 'md:border-r md:border-white/10' : ''}`}
           >
             {/* Large Number */}
             <div 
-              className="text-6xl md:text-7xl text-white/80"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white/80"
               style={{ fontFamily: 'Instrument Serif, serif' }}
             >
               {stat.display}
             </div>
             
             {/* Label */}
-            <div className="text-white/40 text-sm tracking-widest uppercase mt-2">
+            <div className="text-white/40 text-xs md:text-sm tracking-widest uppercase mt-2">
               {stat.label}
             </div>
           </motion.div>
